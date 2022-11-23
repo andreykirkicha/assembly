@@ -1,6 +1,11 @@
 #ifndef ASM_HPP
 #define ASM_HPP
 
-void assembly( const char *file_1, const char *file_2 );
+enum COMMANDS {
+    HLT, PUSH, POP, ADD, SUB, MUL, DIV, OUT
+};
+
+void assembly( const char *file_in, const char *file_out );
+char *is_input_correct( FILE *file, char *str );
 
 #endif
